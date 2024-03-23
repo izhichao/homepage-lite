@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homepage</title>
+    <link rel="icon" type="image/png" href="icons/logo.png" />
+    <link rel="stylesheet" href="index.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div class="service">
+        <div class="service__title title">服务</div>
+        <div class="service__content transition-all" ref="serviceRef">
+          <a v-for="item in services" :href="item.href" class="service__item transition-all shadow rounded-md">
+            <div class="service__icon">
+              <img :src="item.icon" />
+            </div>
+            <div class="service__text">{{ item.text }}</div>
+          </a>
+        </div>
+      </div>
+
+      <div class="bookmark">
+        <div class="bookmark__title title">书签</div>
+        <div class="bookmark__content">
+          <a v-for="item in bookmarks" :href="item.href" class="bookmark__item transition-all shadow rounded-md">
+            {{ item.text }}
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
