@@ -2,15 +2,29 @@ body {
   margin: 0;
   font-family: Manrope, Manrope-Fallback, Arial, sans-serif;
 }
+a {
+  text-decoration: none;
+  color: #000;
+}
 #app {
-  margin: 3.5rem auto;
-  padding: 0 6rem;
+  margin: 3rem 6rem;
 }
 .title {
   color: #787878;
   font-weight: 500;
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+.shadow {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+}
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.rounded-md {
+  border-radius: 0.375rem;
 }
 .service__content {
   margin-top: 1rem;
@@ -34,8 +48,7 @@ body {
   align-items: center;
 }
 .service__icon img {
-  object-fit: contain;
-  height: 64px;
+  width: 64px;
 }
 .service__text {
   flex: 1;
@@ -66,13 +79,13 @@ body {
   background-color: #fafafa;
 }
 @media screen and (max-width: 1440px) {
-  .main-content {
-    padding: 0 3rem;
+  #app {
+    margin: 3rem 3rem;
   }
 }
 @media screen and (max-width: 1080px) {
-  .main-content {
-    padding: 0 6rem;
+  #app {
+    margin: 3rem 6rem;
   }
   .service__content {
     grid-template-columns: repeat(2, 1fr);
@@ -82,9 +95,8 @@ body {
   }
 }
 @media screen and (max-width: 768px) {
-  .main-content {
-    margin: 1.5rem auto;
-    padding: 0 1.5rem;
+  #app {
+    margin: 1.5rem;
   }
   .service__content {
     grid-template-columns: repeat(1, 1fr);
