@@ -6,6 +6,7 @@
     <title>Homepage</title>
     <link rel="icon" type="image/png" href="icons/homepage.ico" />
     <link rel="stylesheet" href="index.css" />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   </head>
   <body>
     <div id="app">
@@ -30,5 +31,25 @@
         </div>
       </div>
     </div>
+    <script>
+      const { createApp, ref, onMounted } = Vue;
+
+      createApp({
+        setup() {
+          const services = [
+            { text: 'Google', href: 'https://google.com', icon: './icons/google.png' }
+          ];
+
+          const bookmarks = [
+            { text: 'Google', href: 'https://google.com' }
+          ];
+
+          return {
+            services,
+            bookmarks
+          };
+        }
+      }).mount('#app');
+    </script>
   </body>
 </html>
