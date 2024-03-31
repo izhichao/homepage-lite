@@ -15,7 +15,12 @@
         <template v-for="(value, key) in services">
           <div class="service__title title">{{ key }}</div>
           <div class="service__content transition-all" ref="serviceRef">
-            <a v-for="item in value" :href="item.href" class="service__item transition-all shadow rounded-md">
+            <a
+              v-for="item in value"
+              :href="item.href"
+              class="service__item transition-all shadow rounded-md"
+              :target="item.target || '_self'"
+            >
               <div class="service__icon">
                 <img :src="item.icon" />
               </div>
@@ -29,7 +34,12 @@
         <template v-for="(value, key) in bookmarks">
           <div class="bookmark__title title">{{ key }}</div>
           <div class="bookmark__content">
-            <a v-for="item in value" :href="item.href" class="bookmark__item transition-all shadow rounded-md">
+            <a
+              v-for="item in value"
+              :href="item.href"
+              class="bookmark__item transition-all shadow rounded-md"
+              :target="item.target || '_self'"
+            >
               {{ item.text }}
             </a>
           </div>
