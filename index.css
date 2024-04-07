@@ -50,6 +50,8 @@ a {
 }
 .service__icon img {
   width: 64px;
+  height: 64px;
+  object-fit: contain;
 }
 .service__text {
   flex: 1;
