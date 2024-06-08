@@ -13,33 +13,39 @@
   <body>
     <div id="app">
       <div :class="key" v-for="(value, key) in services">
-        <div class="title" @click="handleTitle(key)">{{ key }}</div>
-        <div class="service__content transition-all" :style="{maxHeight: expanded[key] ? '0':'500px'}">
-          <a
-            v-for="item in value"
-            :href="item.href"
-            class="service__item transition-all shadow rounded-md"
-            :target="item.target || '_self'"
-          >
-            <div class="service__icon">
-              <img :src="item.icon" />
-            </div>
-            <div class="service__text">{{ item.text }}</div>
-          </a>
+        <label class="title" :for="key">{{key}}</label>
+        <input class="collapse__checkbox" type="checkbox" :id="key" />
+        <div class="collapse transition-all">
+          <div class="service__content">
+            <a
+              v-for="item in value"
+              :href="item.href"
+              class="service__item transition-all shadow rounded-md"
+              :target="item.target || '_self'"
+            >
+              <div class="service__icon">
+                <img :src="item.icon" />
+              </div>
+              <div class="service__text">{{ item.text }}</div>
+            </a>
+          </div>
         </div>
       </div>
 
       <div :class="key" v-for="(value, key) in bookmarks">
-        <div class="title title" @click="handleTitle(key)">{{ key }}</div>
-        <div class="bookmark__content transition-all" :style="{maxHeight: expanded[key] ? '0':'500px'}">
-          <a
-            v-for="item in value"
-            :href="item.href"
-            class="bookmark__item transition-all shadow rounded-md"
-            :target="item.target || '_self'"
-          >
-            {{ item.text }}
-          </a>
+        <input class="collapse__checkbox" type="checkbox" :id="key" />
+        <label class="title" :for="key">{{key}} </label>
+        <div class="collapse transition-all">
+          <div class="bookmark__content">
+            <a
+              v-for="item in value"
+              :href="item.href"
+              class="bookmark__item transition-all shadow rounded-md"
+              :target="item.target || '_self'"
+            >
+              {{ item.text }}
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -47,16 +53,7 @@
       const { createApp, ref, reactive, onMounted } = Vue;
       createApp({
         setup() {
-          const expanded = reactive({});
-          for (let key in services) {
-            expanded[key] = false;
-          }
-          const handleTitle = (key) => {
-            expanded[key] = !expanded[key];
-          };
           return {
-            handleTitle,
-            expanded,
             services,
             bookmarks
           };

@@ -10,12 +10,14 @@ a {
   margin: 3rem 6rem;
 }
 .title {
+  display: block;
   color: #787878;
   font-weight: 500;
   font-size: 1.25rem;
   line-height: 1.75rem;
   margin-top: 1rem;
   cursor: pointer;
+  user-select: none;
 }
 .shadow {
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
@@ -27,6 +29,16 @@ a {
 }
 .rounded-md {
   border-radius: 0.375rem;
+}
+.collapse {
+  display: grid;
+  grid-template-rows: 1fr;
+}
+.collapse__checkbox {
+  display: none;
+}
+.collapse__checkbox:checked + .collapse {
+  grid-template-rows: 0fr;
 }
 .service__content {
   margin-top: 1rem;
@@ -56,11 +68,8 @@ a {
   object-fit: contain;
 }
 .service__text {
-  flex: 1;
-  display: flex;
-  align-items: center;
+  line-height: 94px;
   font-size: 1.25rem;
-  line-height: 1.25rem;
 }
 .bookmark__content {
   margin-top: 1rem;
@@ -73,8 +82,6 @@ a {
   display: flex;
   box-sizing: border-box;
   justify-content: center;
-  align-items: center;
-  font-size: 1rem;
   line-height: 2.75rem;
   background-color: #f5f5f5;
 }
