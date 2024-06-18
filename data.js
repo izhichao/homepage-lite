@@ -1,4 +1,12 @@
 const services = {
+  编程: [
+    {
+      text: 'Github',
+      href: 'https://github.com/izhichao/homepage-lite',
+      icon: 'https://cdn.jsdelivr.net/gh/xushier/HD-Icons/border-radius/Github_A.png',
+      target: '_blank'
+    }
+  ],
   搜索引擎: [
     {
       text: 'Google',
@@ -34,6 +42,7 @@ const services = {
 
 const bookmarks = {
   书签: [
+    { text: 'Github', href: 'https://github.com/izhichao/homepage-lite' },
     { text: 'Google', href: 'https://google.com' },
     { text: '百度', href: 'https://baidu.com' }
   ]
