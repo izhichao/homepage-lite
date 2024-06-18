@@ -33,8 +33,8 @@
       </div>
 
       <div :class="key" v-for="(value, key) in bookmarks">
-        <input class="collapse__checkbox" type="checkbox" :id="key" />
         <label class="title" :for="key">{{key}} </label>
+        <input class="collapse__checkbox" type="checkbox" :id="key" />
         <div class="collapse transition-all">
           <div class="bookmark__content">
             <a
