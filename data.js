@@ -42,11 +42,11 @@ const bookmarks = {
     { text: '互助圈(后台)', href: 'https://github.com/izhichao/mutual-aid-zone-admin' },
   ],
   项目演示: [
-    { text: 'VitePress 极简主题', href: 'https://vitepress.tsx.us.kg' },
-    { text: 'Homepage', href: 'https://tsx.us.kg' },
-    { text: '氢记账', href: 'https://account.tsx.us.kg' },
-    { text: '互助圈', href: 'https://zone.tsx.us.kg' },
-    { text: '互助圈(后台)', href: 'https://admin.zone.tsx.us.kg' },
+    { text: 'VitePress 极简主题', href: 'https://link.zhichao.org/vitepress' },
+    { text: 'Homepage', href: 'https://link.zhichao.org/homepage' },
+    { text: '氢记账', href: 'https://link.zhichao.org/account' },
+    { text: '互助圈', href: 'https://link.zhichao.org/zone/admin' },
+    { text: '互助圈(后台)', href: 'https://link.zhichao.org/zone/admin' },
   ]
 };
 
