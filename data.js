@@ -1,3 +1,6 @@
+const servicesCollapse = [false];
+const bookmarksCollapse = [false, false];
+
 const services = {
   平台: [
     {

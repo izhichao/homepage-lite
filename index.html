@@ -12,9 +12,9 @@
 
   <body>
     <div id="app">
-      <div :class="key" v-for="(value, key) in services">
+      <div :class="key" v-for="(value, key, index) in services">
         <label class="title" :for="key">{{key}}</label>
-        <input class="collapse__checkbox" type="checkbox" :id="key" />
+        <input class="collapse__checkbox" type="checkbox" :id="key" :checked="servicesCollapse[index]" />
         <div class="collapse transition-all">
           <div class="service__content">
             <a
@@ -32,9 +32,9 @@
         </div>
       </div>
 
-      <div :class="key" v-for="(value, key) in bookmarks">
-        <label class="title" :for="key">{{key}} </label>
-        <input class="collapse__checkbox" type="checkbox" :id="key" />
+      <div :class="key" v-for="(value, key, index) in bookmarks">
+        <label class="title" :for="key">{{key}}</label>
+        <input class="collapse__checkbox" type="checkbox" :id="key" :checked="bookmarksCollapse[index]" />
         <div class="collapse transition-all">
           <div class="bookmark__content">
             <a
@@ -55,7 +55,9 @@
         setup() {
           return {
             services,
-            bookmarks
+            servicesCollapse,
+            bookmarks,
+            bookmarksCollapse
           };
         }
       }).mount('#app');
