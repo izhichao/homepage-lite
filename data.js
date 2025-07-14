@@ -30,21 +30,14 @@ const services = {
     },
     {
       text: '公众号',
-      href: 'https://zhichao.org/wechat.png',
+      href: 'https://minio.zhichao.org/assets/wechat.png',
       icon: './icons/wechat.png'
     }
   ]
 };
 
 const bookmarks = {
-  项目演示: [
-    { text: 'VitePress 极简主题', href: 'https://link.zhichao.org/vitepress' },
-    { text: 'Homepage', href: 'https://link.zhichao.org/homepage' },
-    { text: '氢记账', href: 'https://link.zhichao.org/account' },
-    { text: '互助圈', href: 'https://link.zhichao.org/zone' },
-    { text: '互助圈(后台)', href: 'https://link.zhichao.org/zone/admin' }
-  ],
-  项目仓库: [
+  项目: [
     { text: 'VitePress 极简主题', href: 'https://github.com/izhichao/vitepress-theme-minimalism' },
     { text: 'Homepage', href: 'https://github.com/izhichao/homepage-lite' },
     { text: '氢记账', href: 'https://github.com/izhichao/hydrogen-account' },
